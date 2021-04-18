@@ -1,0 +1,24 @@
+{% extends "core/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-2 position-fixed">
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+    </ul>
+    </div>
+    <div class="col-10">
+            {% for food_category, food_category_name in food_categories %}
+                {% if food_category in foods %}
+                    <h2>{{ food_category_name }}</h2>
+                    <div id="{{ food_category }}">
+                {% for food in foods|get_item:food_category %}
+                    {% include 'core/menu_item.html' with food=food%}
+                {% endfor %}
+                    </div>
+                {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

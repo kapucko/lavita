@@ -1,0 +1,14 @@
+{% url 'index' as home_url %}
+{% url 'contact' as contact_url %}
+{% url 'menu' as menu_url %}
+
+<div class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation" {% if request.path == home_url %} class="active" {%endif%}><a href="{{ home_url }}">Home</a></li>
+        <li role="presentation" {% if request.path == menu_url %} class="active" {%endif%}><a href="{{ menu_url }}">Jedálny lístok</a></li>
+        <li role="presentation" {% if request.path == contact_url %} class="active" {%endif%}><a href="{{ contact_url }}">Kontakt</a></li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">La Vita</h3>
+</div>
