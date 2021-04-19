@@ -7,7 +7,7 @@
         {% if food.allergens %}
         <p><small>Obsahuje: {{ food.allergens }} / {{ food.weight }}g</small></p>
         {% endif %}
-        <p> {{ food.price }} &euro; {{ food.category_display_name }}</p>
+        <p> {{ food.price }} &euro;</p>
     </div>
       <div class="col-lg-5">
           <img src="{{ food.image.url }}" class="img-responsive img-rounded float-right" alt="pizza">
