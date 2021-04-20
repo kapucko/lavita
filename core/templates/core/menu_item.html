@@ -5,7 +5,7 @@
         <p><small>{{ food.ingredients }}</small></p>
         {% endif %}
         {% if food.allergens %}
-        <p><small>Obsahuje: {{ food.allergens }} / {{ food.weight }}g</small></p>
+        <p><small>{{ food.weight }}g / Obsahuje: {{ food.allergens }} </small></p>
         {% endif %}
         <p> {{ food.price }} &euro;</p>
     </div>
