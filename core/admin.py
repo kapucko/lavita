@@ -2,8 +2,9 @@ from django.contrib import admin
 
 from .models import Food
 
-# Register your models here.
 
 class FoodAdmin(admin.ModelAdmin):
-    pass
+    list_display = ("name", "category_display_name", "weight", "price")
+
+
 admin.site.register(Food, FoodAdmin)
