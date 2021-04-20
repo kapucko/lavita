@@ -10,6 +10,8 @@
         <p> {{ food.price }} &euro;</p>
     </div>
       <div class="col-lg-5">
+          {% if food.image %}
           <img src="{{ food.image.url }}" class="img-responsive img-rounded float-right" alt="pizza">
+          {% endif %}
     </div>
 </div>
