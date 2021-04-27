@@ -1,18 +1,18 @@
 {% extends "core/base.html" %}
 {% block content %}
-<div class="row">
-    <div class="col-2 position-fixed">
-    <ul class="list-group list-group-horizontal">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-    </ul>
+<div class="row lg-5" style="position: relative">
+    <div class="col-lg-2 col-md-2 categories" >
+      <div class="categories">
+        {% for food_category, food_category_name in food_categories %}
+          <a href="#{{ food_category }}"><span class="badge rounded-pill bg-secondary">{{ food_category_name }}</span></a>
+        {% endfor %}
+      </div>
     </div>
-    <div class="col-10">
+    <div class="col-lg-10 col-md-10">
             {% for food_category, food_category_name in food_categories %}
                 {% if food_category in foods %}
-                    <h2>{{ food_category_name }}</h2>
                     <div id="{{ food_category }}">
+                        <h2>{{ food_category_name }}</h2>
                 {% for food in foods|get_item:food_category %}
                     {% include 'core/menu_item.html' with food=food%}
                 {% endfor %}

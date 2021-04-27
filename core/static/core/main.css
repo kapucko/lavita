@@ -59,6 +59,23 @@ body {
   margin-top: 28px;
 }
 
+.categories {
+  position: -webkit-sticky;
+  position: sticky;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: var(--bs-white);
+  z-index: 1200;
+  top: 0;
+  padding: 0.5rem;
+}
+
+.categories > a {
+  margin: 2px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
@@ -75,5 +92,9 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+  .categories {
+    flex-direction: column;
+    top: 20px;
   }
 }
