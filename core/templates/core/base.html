@@ -2,6 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      {% if not debug %}
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQTM9RWVHP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VQTM9RWVHP');
+    </script>
+      {% endif %}
     <meta charset="utf-8">
     <title>La Vita</title>
     <!-- Bootstrap CSS -->
