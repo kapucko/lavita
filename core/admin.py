@@ -8,3 +8,4 @@ class FoodAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Food, FoodAdmin)
+admin.site.site_header = admin.site.site_title = "Lavita administration"
